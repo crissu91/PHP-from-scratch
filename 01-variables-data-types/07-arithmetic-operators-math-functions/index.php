@@ -9,6 +9,72 @@
 | `/`      | Division       |
 | `%`      | Modulus        |
 */
+
+$output = null;
+
+$num1 = 20;
+$num2 = 10;
+
+$output = "$num1 + $num2 = " . $num1 + $num2;
+$output = "$num1 - $num2 = " . $num1 - $num2;
+$output = "$num1 * $num2 = " . $num1 * $num2;
+$output = "$num1 / $num2 = " . $num1 / $num2;
+$output = "$num1 % $num2 = " . $num1 % $num2;
+
+//Assignment operator
+$num3 = 10;
+// $num3 = $num3 + 20;
+$num3 += 20;
+
+$num3 /= 20;
+
+// Build-in PHP Functions
+
+//rand()
+$output = rand();
+$output = getrandmax();
+$output = rand(1, 10);
+
+//round()
+
+$outpt = round(4.7);
+
+// ceil ()
+
+$output = ceil(4.2);
+
+// floor()
+
+$output = floor(4.9);
+
+// sqrt()
+
+$output = sqrt(64);
+
+// $output = $num3;
+
+// pi()
+
+$output = pi();
+
+// abs()
+
+$output = abs(-4.7);
+
+// max()
+
+$output = max(1, 2, 3, 5, 50);
+$output = max([1, 2, 25,  3, 5]);
+
+//min()
+
+$output = min(1, 2, 3, 5, 50);
+$output = min([10, 2, 25,  3, 5]);
+
+// number_format()
+
+$output = number_format(12345678.89123458979, 2, '.', ',');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +95,10 @@
   <div class="container mx-auto p-4 mt-4">
     <div class="bg-white rounded-lg shadow-md p-6 mt-6">
       <!-- Output -->
+
+      <p class="text-xl">
+        <?= $output ?>
+      </p>
     </div>
   </div>
 </body>
