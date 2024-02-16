@@ -1,3 +1,38 @@
+<?php
+$dayOfWeek = date('l');
+
+switch ($dayOfWeek) {
+  case 'Monday':
+    $message = 'Monday blues';
+    $color = 'blue';
+    break;
+  case 'Tuesday':
+    $message = 'At least it\' not Monday';
+    $color = 'purple';
+    break;
+  case 'Wednesday':
+    $message = 'Hump day';
+    $color = 'orange';
+    break;
+  case 'Thursday':
+    $message = 'One more day to  Friday!';
+    $color = 'red';
+    break;
+  case 'Friday':
+    $message = 'Friday finally!';
+    $color = 'magenta';
+    break;
+  case 'Saturday':
+    $message = 'Weekend!!';
+    $color = 'pink';
+    break;
+  case 'Sunday':
+    $message = 'Weekend almost over';
+    $color = 'green';
+    break;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +46,7 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: blue;
+      background-color: <?= $color ?>;
       color: white;
       display: flex;
       justify-content: center;
@@ -22,7 +57,7 @@
 </head>
 
 <body>
-  <h1>Monday blues!</h1>
+  <h1><?= strtoupper($message) ?></h1>
 </body>
 
 </html>
