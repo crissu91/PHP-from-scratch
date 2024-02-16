@@ -1,5 +1,39 @@
 <?php
 $output = null;
+
+//Get year
+$output = date('Y');
+
+//Get year with timestamp
+$output = date('Y', 936345600);
+
+//Get timestamp from strtotime()
+$outpu = date('Y', strtotime('1999-01-01'));
+
+//Get month
+$output = date('m');
+
+//Get day
+$output = date('D');
+$output = date('l');
+
+//Get year, month, day
+$output = date('Y-m-d');
+
+//Get hour
+$output = date('h');
+
+//Get min
+$output = date('i');
+
+//Get second
+$output = date('s');
+
+//Get am/pm
+$output = date('a');
+
+//All together
+$output = date('Y-m-d h:i:s a');
 ?>
 
 <!DOCTYPE html>
