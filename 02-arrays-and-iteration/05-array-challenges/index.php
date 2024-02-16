@@ -2,13 +2,20 @@
 
 /*
   Challenge 1: Sum of an array
-  
-  1. Create an array of numbers 
+
+  1. Create an array of numbers
   2. Get the sum of all of the numbers combined and put into a variable.
   4. Get the amount of numbers in the array and put into a variable.
-  5. Print out 'The sum of the {amount} numbers is: {sum} '. For example, if the array is [1, 2, 3, 4, 5], the output should be 'The sum of the 5 numbers is: 15'. 
+  5. Print out 'The sum of the {amount} numbers is: {sum} '. For example, if the array is [1, 2, 3, 4, 5], the output should be 'The sum of the 5 numbers is: 15'.
 */
 echo '<h3>Sum Of An Array</h3>';
+
+$nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+$sum = array_sum($nums);
+
+$count = count($nums);
+echo 'The sum of the ' . $count . ' numbers is: ' . $sum;
 
 /*
   Challenge 2: Colors array
@@ -25,6 +32,16 @@ echo '<h3>Colors Array</h3>';
 
 $colors = ['red', 'blue', 'green', 'yellow'];
 
+rsort($colors);
+
+array_push($colors, 'purple', 'orange');
+
+array_splice($colors, 1, 1, 'pink');
+
+array_pop($colors);
+// var_dump($colors);
+
+
 /*
   Challenge 3: Job listings array
 
@@ -35,3 +52,42 @@ $colors = ['red', 'blue', 'green', 'yellow'];
 */
 
 echo '<h3>Job Listings</h3>';
+
+$jobs = [
+  [
+    'id' => 1,
+    'job_title' => 'Job1',
+    'company' => 'Company1',
+    'contact_email' => 'example@example.co.uk',
+    'contact_phone' => '011312345',
+    'skills' => ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS'],
+  ],
+  [
+    'id' => 2,
+    'job_title' => 'Job2',
+    'company' => 'Company2',
+    'contact_email' => 'example@example.co.uk',
+    'contact_phone' => '011312345',
+    'skills' => ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS'],
+  ],
+  [
+    'id' => 3,
+    'job_title' => 'Job3',
+    'company' => 'Company3',
+    'contact_email' => 'example@example.co.uk',
+    'contact_phone' => '011312345',
+    'skills' => ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS'],
+  ],
+];
+
+array_push($jobs, [
+  'id' => 3,
+  'job_title' => 'Job3',
+  'company' => 'Company3',
+  'contact_email' => 'example@example.co.uk',
+  'contact_phone' => '011312345',
+  'skills' => ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS'],
+]);
+
+print_r($jobs[1]['job_title']);
+print_r($jobs[2]['skills'][0]);
