@@ -10,3 +10,11 @@ Names Challenge:
 */
 
 $names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Elanor', 'Anna', 'Freddie', 'Adam'];
+
+foreach ($names as $name) {
+    if (str_starts_with($name, 'A')) {
+        continue;
+    } else {
+        echo strtolower(strrev($name)) . '<br/>';
+    }
+}
