@@ -64,7 +64,7 @@ $students = [
   ],
   [
     'name' => 'Mike Doe',
-    'grades' => [9, 10, 7, 6]
+    'grades' => []
   ],
   [
     'name' => 'Jill Doe',
@@ -78,6 +78,11 @@ $students = [
 
 
 foreach ($students as $student) {
+
+  // if (!count($student['grades'])) {
+  //   echo 'No grades';
+  // } else {
   $student['average_grade'] =  array_sum($student['grades']) / count($students);
-  echo $student['name'] . 'average grade is: ' . $student['average_grade'] . '<br />';
+  echo $student['name'] . ' average grade is: ' . $student['average_grade'] . '<br />';
+  // }
 }
