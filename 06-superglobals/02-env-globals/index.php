@@ -17,6 +17,8 @@ function test()
   echo 'Local variable ' . $foo;
 }
 
+$foo = 'hello';
+
 test();
 
 ?>
